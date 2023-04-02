@@ -4,28 +4,25 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const app = express();
+require('dotenv').config();
 
 // connect to MongoDB using Mongoose
-mongoose.connect('mongodb://localhost/notes-app', { useNewUrlParser: true });
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('Connected to MongoDB');
 });
 
-// define note schema and model using Mongoose
-const noteSchema = new mongoose.Schema({
-  name: String,
-  content: String
-});
-const Note = mongoose.model('Note', noteSchema);
+// import Note schema and model
+const Note = require('./model');
 
 // set up middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // set up routes
-const noteController = require('./controllers/noteController');
+const noteController = require('./controller');
 app.post('/notes', noteController.createNote);
 app.get('/notes', noteController.getAllNotes);
 

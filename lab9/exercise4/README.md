@@ -14,5 +14,6 @@ as a helper, try to implement a basic chat app which includes one of their sugge
 - Add “{user} is typing” functionality.
 - Show who’s online.
 
+
 ## Resources
 

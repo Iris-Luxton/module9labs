@@ -1,3 +1,5 @@
+// Create a **note** model with Mongoose. The schema will be name: String, content: String
+
 const mongoose = require('mongoose');
 
 const noteSchema = new mongoose.Schema({
