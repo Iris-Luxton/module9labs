@@ -1,0 +1,12 @@
+{
+  "name": "exercise1",
+  "version": "1.0.0",
+  "description": "## Assignments Assignment is to be completed by successfully completing the following tasks:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
