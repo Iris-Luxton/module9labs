@@ -1,8 +1,6 @@
 # Programming task - CI/CD with GitHub Actions
-
 ## Assignments
 Assignment is to be completed by successfully completing the following tasks:
-
 **If your lab work folder is in the dev or main branch follow these instructions**:
 1. In the root of the branch, if there is not already a .github folder, create one.
 2. If there is not already a workflows folder inside of the .github folder, create one.
